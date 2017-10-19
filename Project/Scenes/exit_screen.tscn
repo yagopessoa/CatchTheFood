@@ -1,0 +1,178 @@
+[gd_scene load_steps=8 format=1]
+
+[ext_resource path="res://environment/sky2.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/exit_screen.gd" type="Script" id=2]
+[ext_resource path="res://Fonts/emulogic.fnt" type="BitmapFont" id=3]
+
+[sub_resource type="AtlasTexture" id=1]
+
+region = Rect2( 0, 0, 0, 0 )
+margin = Rect2( 0, 0, 0, 0 )
+
+[sub_resource type="AtlasTexture" id=2]
+
+region = Rect2( 0, 0, 0, 0 )
+margin = Rect2( 0, 0, 0, 0 )
+
+[sub_resource type="AtlasTexture" id=3]
+
+region = Rect2( 0, 0, 0, 0 )
+margin = Rect2( 0, 0, 0, 0 )
+
+[sub_resource type="AtlasTexture" id=4]
+
+region = Rect2( 0, 0, 0, 0 )
+margin = Rect2( 0, 0, 0, 0 )
+
+[node name="exit_screen" type="Sprite"]
+
+transform/pos = Vector2( 98, 63 )
+texture = ExtResource( 1 )
+script/script = ExtResource( 2 )
+
+[node name="credits" type="Label" parent="."]
+
+rect/scale = Vector2( 0.25, 0.25 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -25.0
+margin/top = -51.0
+margin/right = 167.0
+margin/bottom = -27.0
+custom_fonts/font = ExtResource( 3 )
+text = "creditos"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="roles" type="Label" parent="."]
+
+rect/scale = Vector2( 0.11, 0.11 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -79.0
+margin/top = -34.0
+margin/right = 596.0
+margin/bottom = 357.0
+custom_fonts/font = ExtResource( 3 )
+text = "desenvolvimento
+
+
+arte
+
+
+
+efeitos sonoros
+
+
+
+tutoriais e assets"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="names" type="Label" parent="."]
+
+rect/scale = Vector2( 0.11, 0.11 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 2.0
+margin/top = -34.0
+margin/right = 902.0
+margin/bottom = 399.0
+custom_fonts/font = ExtResource( 3 )
+text = "yago pessoa
+
+
+thais kuga
+yago pessoa
+
+
+soundbible.com/
+themushroomkingdom.net/wav.shtml
+
+
+github.com/Jbat1Jumper/erythrina"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="lbl_quit" type="Label" parent="."]
+
+rect/scale = Vector2( 0.25, 0.25 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 34.0
+margin/top = 23.0
+margin/right = 138.0
+margin/bottom = 51.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 1, 0, 0, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 2
+custom_constants/shadow_as_outline = 2
+text = "sair"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="quit" type="TouchScreenButton" parent="."]
+
+transform/pos = Vector2( 32, 21 )
+transform/scale = Vector2( 28, 10 )
+normal = SubResource( 1 )
+pressed = SubResource( 2 )
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = "exit_game"
+visibility_mode = 0
+
+[node name="lbl_return" type="Label" parent="."]
+
+rect/scale = Vector2( 0.25, 0.25 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -61.0
+margin/top = 23.0
+margin/right = 83.0
+margin/bottom = 51.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0.276146, 0.625, 0.246582, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/line_spacing = 0
+custom_constants/shadow_offset_y = 2
+custom_constants/shadow_as_outline = 2
+text = "inicio"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="return" type="TouchScreenButton" parent="."]
+
+transform/pos = Vector2( -63, 21 )
+transform/scale = Vector2( 41, 12 )
+normal = SubResource( 3 )
+pressed = SubResource( 4 )
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = "return_to_game"
+visibility_mode = 0
+
+
